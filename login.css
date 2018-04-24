@@ -10,13 +10,13 @@ body.login {
 }
 
 #login h1 a{
-	padding:  0px 0px 0px 20px;
+	padding:  0px 0px 0px 0px;
 	height: 45px;
 }
 
 body.login h1 a {
-	background-image: url('../img/karla-header.png');
-	background-size: 329px 32px;
+	background-image: url('logo-eracom.svg');
+	background-size: 320px 45px;
 	background-position: 10px 0px;
 }
 
