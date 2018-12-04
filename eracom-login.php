@@ -18,16 +18,21 @@ function eracom_login_screen() {
 }
 add_action( 'login_head', 'eracom_login_screen' );
 
-// src: http://codex.wordpress.org/Customizing_the_Login_Form
+// Source: http://codex.wordpress.org/Customizing_the_Login_Form
+// Note: si utilisé dans un thème, on obtiendra le chemin avec get_stylesheet_directory_uri()
 
-// change the link values so the logo links to your WordPress site
+// 2) Changer la cible du lien sur le logo.
+// Par défaut: https://wpfr.net
+
 function eracom_login_logo_url() {
     return get_bloginfo( 'url' );
 }
 add_filter( 'login_headerurl', 'eracom_login_logo_url' );
 
+// 3) Changer la balise "title" du lien.
+// Par défaut: Propulsé par WordPress
 //function eracom_login_logo_url_title() {
-//    return 'option dé/construction';
+//    return 'Titre du site';
 //}
-//add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+//add_filter( 'login_headertitle', 'eracom_login_logo_url_title' );
 
